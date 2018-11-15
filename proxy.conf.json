@@ -1,0 +1,18 @@
+{
+    "_comment": "it means that http://localhost:4200/expense will be forwareded to http://localhost:3100/expense",
+    
+    "/category":{
+        "target": "http://localhost:3100",  
+        "secure": false
+    },
+    
+    "/expense_2018":{
+        "target": "http://localhost:3100",  
+        "secure": false
+    },
+
+    "/expense_2019":{
+        "target": "http://localhost:3100",  
+        "secure": false
+    }
+}

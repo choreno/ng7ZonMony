@@ -33,6 +33,7 @@
 
 
 <mat-toolbar color="primary">
+
   <mat-toolbar-row>
     <span>Custom Toolbar</span>
   </mat-toolbar-row>
@@ -46,13 +47,12 @@
   <mat-toolbar-row>
     <span>Third Line</span>
     <span class="example-spacer"></span>
+
     <mat-icon class="example-icon">favorite</mat-icon>
     <mat-icon class="example-icon">delete</mat-icon>
   </mat-toolbar-row>
+
 </mat-toolbar>
-
-
-
 
 <h3>Raised Buttons</h3>
 <div class="example-button-row">
@@ -60,9 +60,17 @@
   <button mat-raised-button color="primary">Primary</button>
   <button mat-raised-button color="accent">Accent</button>
   <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
+  <button mat-raised-button>Disabled</button>
   <a mat-raised-button routerLink=".">Link</a>
 </div>
+
+<h3>json-server examples</h3>
+<div class="example-button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/list']"><mat-icon>list</mat-icon></a>
+  <a mat-raised-button color="primary" [routerLink]="['/create']"><mat-icon>add</mat-icon></a>
+</div>
+
+
 
 <!-- 
 <h3>Stroked Buttons</h3>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng7ZonMony';
+
+  apiUrl = 'http://localhost:4200';
+
+
+  constructor(public http: HttpClient) {
+    console.log("hello REST Provider");
+  }
+
+
+
+
+
+
+
 }

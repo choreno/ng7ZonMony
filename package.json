@@ -8,8 +8,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "db": "json-server --watch mock/expenseDB.json -p 3100",
-    "app": "concurrently --kill-others \"ng serve -o\" \"npm run db\" "
+    "db": "json-server --watch mock/allDB.json -p 3100",
+    "app": "concurrently --kill-others \"npm run proxy\" \"npm run db\" ",
+    "proxy": "ng serve --proxy-config proxy.conf.json",
+    "concatDB":"node \"./mock/concat-json.js\""
   },
   "private": true,
   "dependencies": {
@@ -40,6 +42,7 @@
     "concurrently": "^4.0.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
+    "json-concat": "0.0.1",
     "json-server": "^0.14.0",
     "karma": "~3.0.0",
     "karma-chrome-launcher": "~2.2.0",
