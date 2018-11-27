@@ -8,10 +8,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "db": "json-server --watch mock/allDB.json -p 3100",
-    "app": "concurrently --kill-others \"npm run proxy\" \"npm run db\" ",
+    "app": "concurrently --kill-others \"npm run preRun\" \"npm run proxy\" ",
     "proxy": "ng serve --proxy-config proxy.conf.json",
-    "concatDB":"node \"./mock/concat-json.js\""
+    "concatDB":"node \"./mock/concat-json.js\"",
+    "db": "json-server --watch mock/allDB.json -p 3100",
+    "preRun": "npm run concatDB && npm run db"
+
   },
   "private": true,
   "dependencies": {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ExpenseService } from './expense.service';
-import { Expense } from '../model/expense.model';
+import { Category } from '../model/category.model';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { Expense } from '../model/expense.model';
 })
 export class ListExpenseComponent implements OnInit {
 
-  expenses: Expense[];
+  categories: Category[];
   
 
   constructor(private expenseService:ExpenseService) { }
@@ -22,8 +22,8 @@ export class ListExpenseComponent implements OnInit {
   }
 
   public getCategories() {
-    this.expenseService.getCategories().subscribe((data:Expense[]) => {
-      this.expenses = data; 
+    this.expenseService.getCategories().subscribe((data:Category[]) => {
+      this.categories = data; 
     }); 
   }
 }

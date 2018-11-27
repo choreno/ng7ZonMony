@@ -9,11 +9,11 @@
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let expense of expenses">
-          <td>{{expense.id}}</td>
-          <td>{{expense.category}}</td>
-          <!-- <td>{{expense.createdDTTM}}</td>
-          <td>{{expense.updatedDTTM}}</td> -->
+      <tr *ngFor="let category of categories">
+          <td>{{category.id}}</td>
+          <td>{{category.name}}</td>
+          <!-- <td>{{category.createdDTTM}}</td>
+          <td>{{category.updatedDTTM}}</td> -->
           
       </tr>
   </tbody>

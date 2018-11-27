@@ -1,6 +1,6 @@
 export class Category {
     id: number;
-    category: string;
+    name: string;
     createdDTTM: string;
     updatedDTTM: string;
 
